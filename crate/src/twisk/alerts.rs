@@ -1,5 +1,5 @@
 use crate::{generated::css_classes::C, Msg};
-use comp_state::{topo, use_state, StateAccess};
+use comp_state::{topo, StateAccess};
 use seed::{prelude::*, *};
 use seed_comp_helpers::on_click;
 

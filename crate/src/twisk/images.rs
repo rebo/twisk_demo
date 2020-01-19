@@ -1,7 +1,7 @@
 use crate::{generated::css_classes::C, Msg};
 use seed::{prelude::*, *};
 
-pub fn simple_image<T: Into<String>>(src: T, alt: T) -> Node<Msg> {
+pub fn _simple_image<T: Into<String>>(src: T, alt: T) -> Node<Msg> {
     div![
         class![C.flex C.flex_wrap C.justify_center],
         div![
@@ -14,7 +14,7 @@ pub fn simple_image<T: Into<String>>(src: T, alt: T) -> Node<Msg> {
     ]
 }
 
-pub fn circle_image<T: Into<String>>(src: T, alt: T) -> Node<Msg> {
+pub fn _circle_image<T: Into<String>>(src: T, alt: T) -> Node<Msg> {
     div![
         class![C.flex C.flex_wrap C.justify_center],
         div![

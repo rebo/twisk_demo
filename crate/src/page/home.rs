@@ -1,12 +1,12 @@
 use crate::{generated::css_classes::C, twisk::*, Model, Msg, Player};
 use comp_state::{
-    list::{use_list, List, ListControl, ListKey},
+    list::{use_list, List, ListKey},
     topo, use_state, StateAccess,
 };
 use enclose::enclose as e;
 use seed::{prelude::*, *};
 use seed_comp_helpers::on_click;
-use slotmap::{DefaultKey, DenseSlotMap};
+use slotmap::DefaultKey;
 
 #[topo::nested]
 pub fn view(model: &Model) -> Node<Msg> {
@@ -130,7 +130,7 @@ struct Team {
 
 impl Default for Team {
     fn default() -> Self {
-        Team {
+        Self {
             positions: HashMap::new(),
         }
     }
