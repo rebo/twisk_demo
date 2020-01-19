@@ -1,0 +1,46 @@
+[package]
+version = "0.1.0"
+name = "twisk-demo"
+repository = "https://github.com/MartinKavik/kavik.cz"
+authors = ["rebo <rebotfc@gmail.com>"]
+description = "Sample Tailwind Starter Kit components that work with seed"
+categories = ["wasm", "rust", "tailwindcss", "seed", "personal", "website"]
+license = "MIT"
+readme = "./README.md"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dev-dependencies]
+wasm-bindgen-test = "^0.3.5"
+
+[dependencies]
+slotmap = "0.4.0"
+comp_state = "0.0.9"
+seed_comp_helpers = "0.0.3"
+# comp_state = {path = "../../../comp_state"}
+# seed_comp_helpers = {path = "../../../seed_comp_helpers"}
+# wasm-bindgen = "^0.2.55"
+seed = "0.5.1"
+fixed-vec-deque = "0.1.8"
+serde = "1.0.104"
+enclose = "1.1.8"
+js-sys = "0.3.35"
+
+[dependencies.web-sys]
+version = "^0.3.32"
+features = [
+  "DomTokenList",
+  "ScrollToOptions",
+  "Navigator",
+  "HtmlElement",
+]
+
+[dependencies.wasm-bindgen]
+version = "^0.2.55"
+features = ["serde-serialize"]
+
+[profile.release]
+lto = true
+opt-level = 's'
